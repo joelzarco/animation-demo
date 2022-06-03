@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96113631284AAAC200F6A2C2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96113630284AAAC200F6A2C2 /* Utilities.swift */; };
+		96113633284AB59E00F6A2C2 /* NotificationBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96113632284AB59E00F6A2C2 /* NotificationBellView.swift */; };
 		96AD1049284966FA00AE2FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD1048284966FA00AE2FAD /* AppDelegate.swift */; };
 		96AD104D284966FA00AE2FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AD104C284966FA00AE2FAD /* ViewController.swift */; };
 		96AD1052284966FB00AE2FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AD1051284966FB00AE2FAD /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		96113630284AAAC200F6A2C2 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		96113632284AB59E00F6A2C2 /* NotificationBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBellView.swift; sourceTree = "<group>"; };
 		96AD1045284966FA00AE2FAD /* animation-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "animation-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AD1048284966FA00AE2FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96AD104C284966FA00AE2FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +58,11 @@
 			children = (
 				96AD1048284966FA00AE2FAD /* AppDelegate.swift */,
 				96AD104C284966FA00AE2FAD /* ViewController.swift */,
+				96113632284AB59E00F6A2C2 /* NotificationBellView.swift */,
+				96113630284AAAC200F6A2C2 /* Utilities.swift */,
 				96AD1051284966FB00AE2FAD /* Assets.xcassets */,
 				96AD1053284966FB00AE2FAD /* LaunchScreen.storyboard */,
 				96AD1056284966FB00AE2FAD /* Info.plist */,
-				96113630284AAAC200F6A2C2 /* Utilities.swift */,
 			);
 			path = "animation-demo";
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				96113631284AAAC200F6A2C2 /* Utilities.swift in Sources */,
 				96AD104D284966FA00AE2FAD /* ViewController.swift in Sources */,
+				96113633284AB59E00F6A2C2 /* NotificationBellView.swift in Sources */,
 				96AD1049284966FA00AE2FAD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

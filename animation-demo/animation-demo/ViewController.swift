@@ -17,11 +17,15 @@ class ViewController: UIViewController {
     let offsetSlider = UISlider()
     let offsetLabel = UILabel()
     
+    let bellView = NotificationBellView()
+    
     let margin : CGFloat = 20
+    let size : CGFloat = 128
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setupBell()
         style()
         layout()
     }
@@ -29,6 +33,17 @@ class ViewController: UIViewController {
 }
 
 extension ViewController{
+    
+    private func setupBell(){
+        
+        view.addSubview(bellView)
+        bellView.translatesAutoresizingMaskIntoConstraints = false
+        bellView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: margin).isActive = true
+        bellView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        bellView.heightAnchor.constraint(equalToConstant: size).isActive = true
+        bellView.widthAnchor.constraint(equalTo: bellView.widthAnchor).isActive = true
+        
+    }
     
     private func style(){
         
