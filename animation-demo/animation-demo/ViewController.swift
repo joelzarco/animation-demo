@@ -68,6 +68,10 @@ extension ViewController{
         Utilities.styleLabel(label: offsetLabel, with: "Offset")
         
         resetButton.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.setTitle("Reset", for: .normal)
+        resetButton.tintColor = .white
+        resetButton.addTarget(self, action: #selector(resetValues), for: .primaryActionTriggered)
+        
         
         view.addSubview(stackView)
         stackView.addArrangedSubview(durationSlider)
@@ -76,6 +80,7 @@ extension ViewController{
         stackView.addArrangedSubview(angleLabel)
         stackView.addArrangedSubview(offsetSlider)
         stackView.addArrangedSubview(offsetLabel)
+        stackView.addArrangedSubview(resetButton)
         
     }
     
@@ -99,8 +104,20 @@ extension ViewController{
         let normalized = CGFloat(sender.value) * (.pi / 2)
         bellView.angle = normalized
     }
+    
     @objc func offsetChanged(_ sender : UISlider!){
         print(sender.value)
         bellView.yOffset = CGFloat(sender.value)
+    }
+    
+    @objc func resetValues(sender : UIButton){
+        print("reset tapped")
+        durationSlider.value = 0.5
+        angleSlider.value = 0.5
+        offsetSlider.value = 0.5
+
+        bellView.duration = Double(1)
+        bellView.angle = .pi/8
+        bellView.yOffset = 0.5
     }
 }
