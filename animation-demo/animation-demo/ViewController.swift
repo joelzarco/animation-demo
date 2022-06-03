@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let bellView = NotificationBellView()
+    
     let stackView = UIStackView()
     let durationSlider = UISlider()
     let durationLabel = UILabel()
@@ -16,8 +18,8 @@ class ViewController: UIViewController {
     let angleLabel = UILabel()
     let offsetSlider = UISlider()
     let offsetLabel = UILabel()
+    let resetButton = UIButton()
     
-    let bellView = NotificationBellView()
     
     let margin : CGFloat = 20
     let size : CGFloat = 128
@@ -65,6 +67,8 @@ extension ViewController{
         offsetSlider.addTarget(self, action: #selector(offsetChanged(_:)), for: .valueChanged)
         Utilities.styleLabel(label: offsetLabel, with: "Offset")
         
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(stackView)
         stackView.addArrangedSubview(durationSlider)
         stackView.addArrangedSubview(durationLabel)
@@ -87,12 +91,16 @@ extension ViewController{
 extension ViewController{
     @objc func durationChanged(_ sender : UISlider!){
         print(sender.value)
+        bellView.duration = Double(sender.value) * 2
     }
     
     @objc func angleChanged(_ sender : UISlider!){
         print(sender.value)
+        let normalized = CGFloat(sender.value) * (.pi / 2)
+        bellView.angle = normalized
     }
     @objc func offsetChanged(_ sender : UISlider!){
         print(sender.value)
+        bellView.yOffset = CGFloat(sender.value)
     }
 }

@@ -3,7 +3,7 @@
 //  animation-demo
 //
 //  Created by Johel Zarco on 03/06/22.
-//
+//  Based on tutorial by @jrasmussoon
 
 import Foundation
 import UIKit
